@@ -1,0 +1,20 @@
+/* Lightweight motion layer: hover, press, and keyboard feedback only. */
+.button,.text-link,.share-button,.nav-apply,.scroll-cue,footer>a,.feature-card,.steps article,.campaign,details{transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,background-color .22s ease,color .22s ease,border-color .22s ease}
+.button:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--black)}
+.button-dark:hover{box-shadow:5px 5px 0 var(--orange)}
+.button:active{transform:translate(0,0);box-shadow:1px 1px 0 var(--black)}
+.text-link:hover{color:var(--orange)}
+.text-link:hover i{display:inline-block;transform:translateY(4px)}
+.share-button:hover{color:var(--orange);letter-spacing:.12em}
+.nav-apply:hover{background:var(--orange);transform:rotate(-2deg)}
+.scroll-cue:hover span{display:inline-block;animation:nudge .65s ease-in-out infinite}
+.feature-card:hover{z-index:2;transform:translate(-5px,-5px);box-shadow:7px 7px 0 var(--black)}
+.feature-card:hover .arrow{transform:translate(5px,5px) rotate(-8deg)}
+.steps article:hover{background:var(--lime);padding-top:14px}
+.campaign:hover{transform:rotate(-1.2deg) translateY(-6px);box-shadow:7px 7px 0 var(--black)}
+.campaign:hover:after{transform:scale(1.06) rotate(5deg)}
+details:hover{padding-left:10px}
+summary:focus-visible,.button:focus-visible,.text-link:focus-visible,.share-button:focus-visible,.nav-apply:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+@keyframes nudge{50%{transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+@media(max-width:760px){.button:hover,.feature-card:hover,.campaign:hover{transform:none;box-shadow:none}.steps article:hover{padding-top:14px}}
