@@ -17,7 +17,7 @@ form?.addEventListener('submit', event => {
 document.querySelector('.share-button')?.addEventListener('click', async () => {
   const text = 'NOT__AVERAGE — a Lagos creative community for people done waiting for permission.';
   try { await navigator.share({ title: 'NOT__AVERAGE', text, url: location.href }); }
-  catch { await navigator.clipboard?.writeText(`${text} ${location.href}`); document.querySelector('.share-button').textContent = 'LINK COPIED. PASS IT ON. ↗'; }
+  catch { await navigator.clipboard?.writeText(`${text} ${location.href}`); document.querySelector('.share-button').textContent = 'LINK COPIED. PASS IT ON.'; }
 });
 
 const observer = new IntersectionObserver(entries => entries.forEach(entry => {
